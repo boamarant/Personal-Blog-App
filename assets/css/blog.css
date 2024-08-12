@@ -1,0 +1,61 @@
+/* Blog posts container */
+#posts-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Individual posts */
+.post {
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Post headers */
+.post h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Post metadata */
+.post p {
+    margin: 0.5rem 0;
+}
+
+/* Delete button */
+.delete-button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.delete-button:hover {
+    background-color: #ff0000;
+}
+
+/* Dark mode - Posts */
+body.dark-mode .post {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-mode .post h2 {
+    color: #ffcc00;
+}
+
+/* Dark mode - Delete button */
+body.dark-mode .delete-button {
+    background-color: #ff5555;
+}
+
+body.dark-mode .delete-button:hover {
+    background-color: #ff2222;
+}

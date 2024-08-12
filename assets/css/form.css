@@ -1,0 +1,55 @@
+/* Centers the form */
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Text inputs and textarea */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Form submit button */
+button[type="submit"] {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+/* Error message */
+#error-message {
+    color: red;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Dark mode */
+body.dark-mode main {
+    background-color: #2c2c2c;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode textarea {
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+}
+
+body.dark-mode #error-message {
+    color: #ffcc00;
+}
