@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-This project is being deployed on GitHub Pages at the following URL: [https://note-taker-application-6lpo.onrender.com/](https://note-taker-application-6lpo.onrender.com/). 
+This project is being deployed on GitHub Pages at the following URL: [https://boamarant.github.io/Personal-Blog-App/](https://boamarant.github.io/Personal-Blog-App/). 
 
 ## Credits
 
