@@ -35,17 +35,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    renderPosts();
-
-    // Event listener for light/dark mode
-    document.getElementById('mode-toggle').addEventListener('click', () => {
+    // Function to toggle light/dark mode
+    function toggleMode() {
         document.body.classList.toggle('dark-mode');
-    });
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode);
+        modeIcon.classList.toggle('fa-sun', !isDarkMode);
+        modeIcon.classList.toggle('fa-moon', isDarkMode);
+    }
 
-    // Event listener for the back button
+    // Get the mode toggle button and icon
+    const modeToggle = document.getElementById('mode-toggle');
+    const modeIcon = document.getElementById('mode-icon');
+
+    // Set mode based on localStorage
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        modeIcon.classList.add('fa-moon');
+        modeIcon.classList.remove('fa-sun');
+    } else {
+        modeIcon.classList.add('fa-sun');
+        modeIcon.classList.remove('fa-moon');
+    }
+
+    // Event listeners for mode toggle and back button
+    modeToggle.addEventListener('click', toggleMode);
     document.getElementById('back-button').addEventListener('click', () => {
         window.location.href = 'index.html';
     });
+    
 
     // For deleting posts
     function handleDelete(event) {
@@ -58,4 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reload the page to update the list of posts
         renderPosts();
     }
+
+    // Render posts on page load
+    renderPosts();
 });
