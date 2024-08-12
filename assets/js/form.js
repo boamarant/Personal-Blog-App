@@ -27,3 +27,8 @@ document.getElementById('blog-form').addEventListener('submit', function(event) 
     // Sends user to the posts page after submitting the post
     window.location.href = 'blog.html';
 });
+
+// Event listener for blog button
+document.getElementById('blog-button')?.addEventListener('click', () => {
+    window.location.href = 'blog.html';
+});
